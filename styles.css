@@ -1,0 +1,331 @@
+ls */
+
+/*=================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2),
+        0px -5px 5px rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        text-shadow: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: hsl(243, 87%, 12%)
+}
+
+a {
+    color: inherit;
+}
+
+input {
+    font: 400 100% Raleway;
+    line-height: 2;
+}
+
+::placeholder {
+    color: #000;
+    opacity: .2;
+}
+
+/*=================================*/
+/*Flex the site                    */
+/*=================================*/
+
+.flex--wrapper {
+    display: flex;
+    min-height: 100%;
+}
+
+
+
+.background--wrapper--mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .background--wrapper--mobile {
+        display: block;
+        background-image: url("images/bg-intro.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: cover;
+        height: 920px;
+    }
+
+}
+
+/*=================================*/
+/*Left Column styles               */
+/*=================================*/
+.left--column--desktop {
+    width: 45%;
+}
+
+.mobile--design {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .left--column--desktop {
+        display: none;
+    }
+
+    .left--column--desktop {
+        width: 100%;
+    }
+
+    .mobile--design {
+        display: flex;
+        justify-content: space-between;
+        padding: 5% 0 5% 5%;
+        width: 90%;
+    }
+
+}
+
+
+.illustration-main {
+    background-image: url("images/illustration-main.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 1041px) and (min-width: 768px) {
+    .illustration-main {
+        background-size: contain;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .illustration--main--mobile {
+        height: 50%;
+        background-image: url("images/illustration-main.svg");
+        background-position: 50%;
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: contain;
+        margin-top: 10%;
+    }
+}
+
+
+
+.background {
+    background: linear-gradient(to left bottom, hsl(243, 87%, 12%), hsl(243, 86%, 85%));
+    height: 100%;
+}
+
+
+/*=================================*/
+/*Right Column styles              */
+/*=================================*/
+
+.right--column {
+    width: 55%;
+}
+
+@media only screen and (max-width: 768px) {
+    .right--column {
+        width: auto;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*=================================*/
+/*Header -- Right Column           */
+/*=================================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0 5% 5%;
+    width: 90%;
+}
+
+.company--logo {
+    width: 40%;
+}
+
+.company--logo img {
+    width: 50%;
+}
+
+@media only screen and (max-width: 1430px) and (min-width: 768px) {
+    .company--logo img {
+        width: 80%;
+    }
+}
+
+.social--media--desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop--design {
+        display: none;
+    }
+
+    .social--media {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+
+    i {
+        color: white;
+    }
+}
+
+section {
+    text-align: left;
+    padding-left: 5%;
+    width: 90%;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    section {
+        text-align: left;
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+section h1 {
+    font-weight: 700;
+    font-size: 3.0em;
+    letter-spacing: .02em;
+    word-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.paragraphs {
+    margin-top: 5%;
+}
+
+section .paragraphs p {
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(0, 0%, 50%);
+    font-weight: 400;
+    line-height: 1.3;
+    word-spacing: 0.02em;
+    font-size: 1.2em;
+}
+
+/*=================================*/
+/*Newsletter SignUp--Right Column  */
+/*=================================*/
+
+form {
+    padding-top: 15%;
+}
+
+form>label>h3 {
+    font-size: 1.5em;
+    margin-bottom: 3%;
+}
+
+.sign--email {
+    display: flex;
+    width: 90%;
+}
+
+.sign--email>input {
+    border: 0.5px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    flex: 80% 1 1;
+    font-size: 1.5em;
+    padding-left: 2%;
+    text-overflow: ellipsis;
+}
+
+.sign--email>button {
+    flex: 30% 1 0;
+    background-color: hsl(182, 72%, 53%);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 5%;
+    cursor: pointer;
+    height: 4em;
+}
+
+@media only screen and (max-width: 768px) {
+    .sign--email {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sign--email>input {
+        flex-basis: 100%;
+    }
+
+    .sign--email>button {
+        margin-left: 0;
+        margin-top: 5%;
+        flex: 30% 0 0;
+        height: 2.5em;
+        padding: 0 2%;
+    }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+.policy {
+    text-align: end;
+    margin-top: 15%;
+}
+
+@media only screen and (max-width: 768px) {
+    .policy {
+        padding-bottom: 5%;
+    }
+}
